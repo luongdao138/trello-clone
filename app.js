@@ -10,7 +10,14 @@ require('express-async-errors');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors({ origin: 'http://localhost:3000' }));
+app.use(
+  cors({
+    origin: [
+      'http://localhost:3000',
+      'https://wizardly-nightingale-2253f3.netlify.app/',
+    ],
+  })
+);
 app.use(helmet());
 
 const notFoundMiddleware = require('./middlewares/notFound');
