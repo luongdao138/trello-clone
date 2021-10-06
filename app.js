@@ -14,7 +14,7 @@ app.use(
   cors({
     origin: [
       'http://localhost:3000',
-      'https://wizardly-nightingale-2253f3.netlify.app/',
+      'https://wizardly-nightingale-2253f3.netlify.app',
     ],
   })
 );
